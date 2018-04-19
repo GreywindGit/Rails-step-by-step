@@ -1,10 +1,10 @@
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <%= link_to "sample app", '#', id: "logo" %>  <!-- link_to (Rails helper) arguments: link text, link url, (optional) options hash  => equivalent to <a> tag -->
+        <%= link_to "sample app", root_path, id: "logo" %>  <!-- link_to (Rails helper) arguments: link text, link url, (optional) options hash  => equivalent to <a> tag -->
         <nav>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home",   '#' %></li>
-            <li><%= link_to "Help",   '#' %></li>
+            <li><%= link_to "Home",   root_path  %></li>
+            <li><%= link_to "Help",   help_path  %></li>
             <li><%= link_to "Log in", '#' %></li>
           </ul>
         </nav>
