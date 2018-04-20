@@ -1,0 +1,16 @@
+<%= provide(:name, "List of users") %>
+<h1>List of registered users</h1>
+
+<% @users.each do |user| %>
+<div class="row">
+    <aside class="col-md-6">
+        <section class="user-info">
+            <h1>
+                <%= gravatar_for user %>
+                <%= user.name %>
+                &lt;<%= user.email %>&gt;
+            </h1>
+        </section>
+    </aside>
+</div>
+<% end %>
