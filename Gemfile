@@ -10,6 +10,8 @@ end
 gem 'rails', '~> 5.1.6'
 # Use bcrypt for generating secure passwords
 gem 'bcrypt', '3.1.11'
+# Use faker to generate users in seed
+gem 'faker', '1.8.7'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
