@@ -1,16 +1,11 @@
-<%= provide(:name, "List of users") %>
+<%= provide(:title, "List of users") %>
 <h1>List of registered users</h1>
 
-<% @users.each do |user| %>
-<div class="row">
-    <aside class="col-md-6">
-        <section class="user-info">
-            <h1>
-                <%= gravatar_for user %>
-                <%= user.name %>
-                &lt;<%= user.email %>&gt;
-            </h1>
-        </section>
-    </aside>
-</div>
-<% end %>
+<ul class="users">
+    <% @users.each do |user| %>
+        <li>
+            <%= gravatar_for user, size: 50 %>
+            <%= link_to user.name, user %>
+        </li>
+    <% end %>
+</ul>

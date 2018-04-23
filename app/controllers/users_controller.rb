@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:edit, :update]  # call logged_in_user method before the selected acions
+  before_action :logged_in_user, only: [:index, :edit, :update]  # call logged_in_user method before the selected acions
   before_action :correct_user, only: [:edit, :update]
+
+  def index
+    @users = User.all
+  end
 
   def show
     @user = User.find(params[:id])
@@ -19,10 +23,6 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
-  end
-
-  def index
-    @users = User.all
   end
 
   def edit
