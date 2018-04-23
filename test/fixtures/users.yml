@@ -9,3 +9,30 @@ judy:
   name: Judy Hopps
   email: judy@zootropolis.gov
   password_digest: <%= User.digest('judyhopps') %>
+
+sheridan:
+  name: Sheridan Monahan
+  email: example-86@gmail.com
+  password_digest: <%= User.digest('python') %>
+
+beau:
+  name: Beau Farrell
+  email: example-63@gmail.com
+  password_digest: <%= User.digest('python') %>
+
+kelsi:
+  name: Kelsi Wilkinson
+  email: example-69@gmail.com
+  password_digest: <%= User.digest('python') %>
+
+angelita:
+  name: Angelita Daugherty
+  email: example-76@gmail.com
+  password_digest: <%= User.digest('python') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name: <%= "User #{n}" %>
+  email: <%= "user-#{n}@gmail.com" %>
+  password_digest: <%= User.digest('python') %>
+<% end %>
