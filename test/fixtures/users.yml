@@ -4,6 +4,7 @@ earthsong:
   name: Earthsong
   email: earthsong@gmail.com
   password_digest: <%= User.digest('earthsong') %>
+  admin: true
 
 judy:
   name: Judy Hopps
