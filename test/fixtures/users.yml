@@ -5,35 +5,49 @@ earthsong:
   email: earthsong@gmail.com
   password_digest: <%= User.digest('earthsong') %>
   admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 judy:
   name: Judy Hopps
   email: judy@zootropolis.gov
   password_digest: <%= User.digest('judyhopps') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 sheridan:
   name: Sheridan Monahan
   email: example-86@gmail.com
   password_digest: <%= User.digest('python') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 beau:
   name: Beau Farrell
   email: example-63@gmail.com
   password_digest: <%= User.digest('python') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 kelsi:
   name: Kelsi Wilkinson
   email: example-69@gmail.com
   password_digest: <%= User.digest('python') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 angelita:
   name: Angelita Daugherty
   email: example-76@gmail.com
   password_digest: <%= User.digest('python') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 <% 30.times do |n| %>
 user_<%= n %>:
   name: <%= "User #{n}" %>
   email: <%= "user-#{n}@gmail.com" %>
   password_digest: <%= User.digest('python') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 <% end %>
