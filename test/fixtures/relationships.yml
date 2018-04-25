@@ -1,1 +1,15 @@
-# soo empty
+one:
+  follower: earthsong
+  followed: beau
+
+two:
+  follower: earthsong
+  followed: sheridan
+
+three:
+  follower: kelsi
+  followed: earthsong
+
+four:
+  follower: angelita
+  followed: earthsong
