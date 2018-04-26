@@ -83,4 +83,23 @@ class UserTest < ActiveSupport::TestCase
     earthsong.unfollow(judy)
     assert_not earthsong.following?(judy)
   end
+
+  test "feed should have the right posts" do
+    earthsong = users(:earthsong)
+    judy = users(:judy)
+    sheridan = users(:sheridan)
+    # Post from followed user
+    sheridan.microposts.each do |post_following|
+      assert earthsong.feed.include?(post_following)
+    end
+    # Posts from self
+    earthsong.microposts.each do |post_self|
+      assert earthsong.feed.include?(post_self)
+    end
+    # Posts from unfollowed user
+    judy.microposts.each do |post_unfollowed|
+      assert_not earthsong.feed.include?(post_unfollowed)
+    end
+  end
+
 end
